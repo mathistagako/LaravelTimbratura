@@ -14,8 +14,12 @@ class VerifyCsrfToken extends Middleware
     protected $except = [
         "http://localhost:3000/registrazione",
         "http://localhost:3000/login",
+        "http://localhost:3000/timbro",
         "http://localhost",
         "http://localhost/register",
-        "http://localhost/login"
+        "http://localhost/login",
+        "http://localhost/timbroEntrata",
+        "http://localhost/timbroUscita",
+        "http://localhost/getGiornate",
     ];
 }

@@ -3,6 +3,9 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\TimbraturaController;
+use App\Http\Controllers\GiornateController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -27,3 +30,11 @@ Route::post('/register',[RegisterController::class,'addUser']);
 
 Route::post('/login',[LoginController::class,'authenticate']);
 
+//TIMBRATURA
+
+Route::post('/timbroEntrata',[TimbraturaController::class,'checkEntrata']);
+Route::post('/timbroUscita',[TimbraturaController::class,'checkUscita']);
+
+//GET GIORNATE
+
+Route::post('/getGiornate',[GiornateController::class,'ottieniGiornate']);
